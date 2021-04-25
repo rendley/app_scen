@@ -1,0 +1,46 @@
+body{
+    background-color: #34bde4;
+    max-width: 305mm;
+    margin: 0 auto;
+    font-family: "Poppins", Arial, sans-serif;
+}
+
+div {
+    border: 1px solid black;
+    padding: 10px 5px;
+}
+
+.row {
+    margin-top: 100px;
+}
+
+.button1 {
+    background-color: #4CAF50; /* Green */
+    border: none;
+    color: white;
+    padding: 15px 32px;
+    text-align: center;
+    text-decoration: none;
+    display: inline-block;
+    font-size: 16px;
+    border-radius: 5px;
+
+}
+
+.wrapper {
+    margin-bottom: 5px;
+    background-color: #7ecfc0;
+}
+
+.form-check-tactic {
+    background-color: #7a630f;
+    border-radius: 2px;
+    width: 550px;
+}
+
+.form-check-technic {
+    background-color: #ffdf7e;
+    border-radius: 2px;
+    width: 500px;
+    margin-left: 10px;
+}

@@ -1,0 +1,68 @@
+<!DOCTYPE html>
+<html lang="en">
+{% load static %}
+<head>
+
+    <title>Результат</title>
+
+    <meta charset="utf-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1, shrink-to-fit=no">
+    <link href="https://fonts.googleapis.com/css?family=Poppins:300,400,500,600,700,800,900" rel="stylesheet">
+    <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/4.0.0/css/bootstrap.min.css"
+          integrity="sha384-Gn5384xqQ1aoWXA+058RXPxPg6fy4IWvTNh0E263XmFcJlSAwiGgFAW/dAiS6JXm" crossorigin="anonymous">
+    <!--    <link rel="stylesheet" href="{% static 'js/bootstrap.min.css' %}">-->
+    <!--    <link rel="stylesheet" href="{% static 'css/style.css' %}">-->
+
+</head>
+<body>
+
+<div class="container">
+    <div class="row">
+        <div class="col-md-12">
+
+            {% for tactic in tactics %}
+
+                <div class="card text-white bg-primary mb-3" style="max-width: 18rem;">
+                    <div class="card-header">Заголовок</div>
+                    <div class="card-body">
+                        <h5 class="card-title">{{ tactic.name }}</h5>
+                        <p class="card-text">{{ tactic.description}}</p>
+                    </div>
+                </div>
+
+                     {% for technic in technics %}
+                        {% if tactic.id == technic.tactics.id %}
+                            <div class="card text-white bg-warning mb-3" style="max-width: 18rem;">
+                                <div class="card-header">Заголовок техники</div>
+                                <div class="card-body">
+                                    <h5 class="card-title">{{ technic.name }}</h5>
+                                    <p class="card-text">{{ technic.description}}</p>
+                                </div>
+                            </div>
+                        {% endif %}
+                     {% endfor %}
+
+            {% endfor %}
+        </div>
+    </div>
+</div>
+
+
+<script src="https://code.jquery.com/jquery-3.2.1.slim.min.js"
+        integrity="sha384-KJ3o2DKtIkvYIK3UENzmM7KCkRr/rE9/Qpg6aAZGJwFDMVNA/GpGFF93hXpG5KkN"
+        crossorigin="anonymous"></script>
+<script src="https://cdnjs.cloudflare.com/ajax/libs/popper.js/1.12.9/umd/popper.min.js"
+        integrity="sha384-ApNbgh9B+Y1QKtv3Rn7W3mgPxhU9K/ScQsAP7hUibX39j7fakFPskvXusvfa0b4Q"
+        crossorigin="anonymous"></script>
+<script src="https://maxcdn.bootstrapcdn.com/bootstrap/4.0.0/js/bootstrap.min.js"
+        integrity="sha384-JZR6Spejh4U02d8jOt6vLEHfe/JQGiRRSQQxSfFWpi1MquVdAyjUar5+76PVCmYl"
+        crossorigin="anonymous"></script>
+<!--<script src="{% static 'js/jquery.min.js' %}"></script>-->
+<!--<script src="{% static 'js/popper.js' %}"></script>-->
+<!--<script src="{% static 'js/bootstrap.min.js' %}"></script>-->
+<!--<script src="{% static 'js/main.js' %}"></script>-->
+
+</body>
+</html>
+
+

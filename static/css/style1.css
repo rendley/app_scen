@@ -1,0 +1,34 @@
+
+.wrapper{
+    display: flex;
+    font-family: 'Arial';
+    background-color: #00463f;
+    color: white;
+    padding: 5px;
+    margin: 5px;
+}
+
+.wrapper1{
+    display: flex;
+
+    font-family: 'Arial';
+    background-color: #be34b8;
+    color: white;
+    padding: 2px;
+    margin: 5px;
+}
+
+.item{
+    padding: 10px;
+    background-color: #009688;
+    text-align: center;
+    margin: 5px;
+}
+
+.item1{
+
+    padding: 10px;
+    background-color: #3f66e6;
+    text-align: center;
+    margin: 10px;
+}

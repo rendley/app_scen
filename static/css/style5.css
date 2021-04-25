@@ -1,0 +1,49 @@
+body{
+    background-color: #ffffff;
+    max-width: 305mm;
+    margin: 0 auto;
+}
+
+div {
+    /*border: 1px solid black;*/
+    padding: 10px 1px;
+}
+
+.row {
+    display: flex;
+    justify-content: center;
+    font-size: 14px;
+    margin: 5px;
+    /*вертикальное центрирование блоков div item внутри div wrapper*/
+    /*или можно рассмотреть центрирование wrapper внутри row*/
+    align-items: center;
+}
+
+.wrapper{
+
+}
+
+.item{
+    width: 105px;
+    height: 150px;
+    border-radius: 10px;
+    background-color: #2375d2;
+    text-align: center;
+    /*margin: 3px;*/
+    /*padding: 5px;*/
+}
+
+.wrapper1{
+
+}
+
+.item1{
+    width: 105px;
+    border-radius: 10px;
+    background-color: #d2875e;
+    text-align: center;
+    margin-bottom: 3px;
+    /*margin: 3px;*/
+    /*padding: 5px;*/
+
+}
