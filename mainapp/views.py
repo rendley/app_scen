@@ -14,8 +14,8 @@ class TacticsView(View):
 
     def post(self, request):
         """получение выбранного списка из чекбоксов и рендер"""
-        list_of_tactics = request.POST.getlist('filetouse')
-        list_of_technics = request.POST.getlist('filetouse2')
+        list_of_tactics = request.POST.getlist('list_tactic_id')
+        list_of_technics = request.POST.getlist('list_technic_id')
         # print(list_of_tactics)
         # print(list_of_technics)
         tactics = Tactics.objects.filter(id__in=list_of_tactics)
