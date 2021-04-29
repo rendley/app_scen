@@ -3,45 +3,52 @@
 {% load static %}
 <head>
 
-    <title>Checkbox 04</title>
+    <title>Выбор техник</title>
 
     <meta charset="utf-8">
-    <meta name="viewport" content="width=device-width, initial-scale=1, shrink-to-fit=no">
-    <link href="https://fonts.googleapis.com/css?family=Poppins:300,400,500,600,700,800,900" rel="stylesheet">
-    <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/4.0.0/css/bootstrap.min.css"
-          integrity="sha384-Gn5384xqQ1aoWXA+058RXPxPg6fy4IWvTNh0E263XmFcJlSAwiGgFAW/dAiS6JXm" crossorigin="anonymous">
+<!--    <meta name="viewport" content="width=device-width, initial-scale=1, shrink-to-fit=no">-->
+<!--    <link href="https://fonts.googleapis.com/css?family=Poppins:300,400,500,600,700,800,900" rel="stylesheet">-->
+<!--    <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/4.0.0/css/bootstrap.min.css"-->
+<!--          integrity="sha384-Gn5384xqQ1aoWXA+058RXPxPg6fy4IWvTNh0E263XmFcJlSAwiGgFAW/dAiS6JXm" crossorigin="anonymous">-->
     <!--    <link rel="stylesheet" href="{% static 'js/bootstrap.min.css' %}">-->
-    <!--    <link rel="stylesheet" href="{% static 'css/style.css' %}">-->
+        <link rel="stylesheet" href="{% static 'css/style_index.css' %}">
 
 </head>
 <body>
+<div class="instr">
+    Короткая инструкция
+    <p>
+    Просто выбирай тактики и техники. Внизу увидишь кнопку создать модель.
+    <p>
+    </p>
+    Congratulations
+    </p>
+</div>
 
-<div class="container">
     <div class="row">
-        <div class="col-md-12">
-
             {% for tactic in tactics %}
+        <div class="wrapper">
             <form action="" method="post">
                 {% csrf_token %}
-                <div class="form-check">
-                    <input class="form-check-input" type="checkbox" value="{{ tactic.id }}" id="defaultCheck1" name="filetouse">
-                    <label class="form-check-label" for="defaultCheck1">{{ tactic.name }}</label>
-                </div>
-                {% for technic in tactic.technics.all %}
-                    <ul>
-                        <div class="form-check">
-                            <input class="form-check-input" type="checkbox" value="{{ technic.id }}" id="defaultCheck2" name="filetouse2">
-                            <label class="form-check-label" for="defaultCheck2">{{ technic.name }}</label>
-                        </div>
-                    </ul>
-                {% endfor %}
 
-            {% endfor %}
-                <button class="btn btn-outline-primary" type="submit">Select</button>
-            </form>
+                        <div class="form-check-tactic">
+                            <input class="form-check-input" type="checkbox" value="{{ tactic.id }}" id="defaultCheck1" name="filetouse">
+                            <label class="form-check-label" for="defaultCheck1">{{ tactic.name }}</label>
+                        </div>
+
+                    {% for technic in tactic.technics.all %}
+                        <ul>
+                            <div class="form-check-technic">
+                                <input class="form-check-input" type="checkbox" value="{{ technic.id }}" id="defaultCheck2" name="filetouse2">
+                                <label class="form-check-label" for="defaultCheck2">{{ technic.name }}</label>
+                            </div>
+                        </ul>
+                    {% endfor %}
         </div>
+            {% endfor %}
+                <button class="button1" type="submit">Создать модель</button>
+            </form>
     </div>
-</div>
 
 
 <script src="https://code.jquery.com/jquery-3.2.1.slim.min.js"
