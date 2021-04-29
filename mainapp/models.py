@@ -38,7 +38,7 @@ class Technics(models.Model):
 
     name = models.CharField(verbose_name='Название техники', max_length=1000)
     slug = models.SlugField(unique=True)
-    number = models.DecimalField(verbose_name='Номер техники', max_digits=4, decimal_places=2)
+    number = models.FloatField(verbose_name='Номер техники')
     description = models.TextField(verbose_name='Описание техники', null=True)
 
     def __str__(self):

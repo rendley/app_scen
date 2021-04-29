@@ -13,7 +13,7 @@ class TechnicsAdmin(admin.ModelAdmin):
     search_fields = ('description',)
     list_filter = ('name',)
 
-admin.site.register(Title)
-admin.site.register(Implementation)
+# admin.site.register(Title)
+# admin.site.register(Implementation)
 admin.site.register(Tactics, TacticsAdmin)
 admin.site.register(Technics, TechnicsAdmin)

@@ -3,16 +3,6 @@ from django.views import View
 from .models import Title, Implementation, Tactics, Technics
 
 
-# class TacticsView(View):
-#     """
-#     Все тактики пробный
-#     """
-#     def get(self, request):
-#         tactics = Tactics.objects.all()
-#         context = {'tactics': tactics}
-#         return render(request, 'base.html', context)
-
-
 class TacticsView(View):
     """
     Все тактики
@@ -20,7 +10,7 @@ class TacticsView(View):
     def get(self, request):
         tactics = Tactics.objects.all()
         context = {'tactics': tactics}
-        return render(request, 'index2.html', context)
+        return render(request, 'index.html', context)
 
     def post(self, request):
         """получение выбранного списка из чекбоксов и рендер"""
@@ -35,5 +25,5 @@ class TacticsView(View):
         for i in range(1,11):
             numbers.append(i)
         context = {'tactics': tactics, 'technics': technics, 'numbers': numbers}
-        return render(request, 'result5.html', context)
+        return render(request, 'result.html', context)
 

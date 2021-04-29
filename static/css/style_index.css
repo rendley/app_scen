@@ -1,24 +1,25 @@
 body{
-    background-color: #34bde4;
-    max-width: 305mm;
+    background-color: #dbd0d0;
+    max-width: 900px;
     margin: 0 auto;
     font-family: "Poppins", Arial, sans-serif;
 }
 
 div {
-    border: 1px solid black;
+    /*border: 1px solid black;*/
     padding: 10px 5px;
 }
 
 .row {
-    margin-top: 100px;
+    margin-top: 50px;
+    margin-bottom: 100px;
 }
 
 .button1 {
-    background-color: #4CAF50; /* Green */
-    border: none;
+    background-color: rgba(157, 123, 47, 0.46);
+    border: 2px solid rgba(90, 71, 27, 0.46);
     color: white;
-    padding: 15px 32px;
+    padding: 15px 50px;
     text-align: center;
     text-decoration: none;
     display: inline-block;
@@ -29,18 +30,33 @@ div {
 
 .wrapper {
     margin-bottom: 5px;
-    background-color: #7ecfc0;
+    background-color: rgba(163, 154, 154, 0.46);
+    text-align: center;
+    border: 2px solid rgba(90, 71, 27, 0.46);
 }
 
 .form-check-tactic {
-    background-color: #7a630f;
+    background-color: #7cacef;
     border-radius: 2px;
-    width: 550px;
+    width: 850px;
+    text-align: left;
+    border: 2px solid rgba(90, 71, 27, 0.46);
+
 }
 
 .form-check-technic {
-    background-color: #ffdf7e;
+    background-color: #e7b092;
     border-radius: 2px;
-    width: 500px;
+    width: 800px;
     margin-left: 10px;
+    text-align: left;
+    border: 2px solid rgba(90, 71, 27, 0.46);
+}
+
+.instr {
+    margin-bottom: 5px;
+    background-color: rgba(163, 154, 154, 0.46);
+    text-align: center;
+    font-size: 20px;
+    border: 2px solid rgba(90, 71, 27, 0.46);
 }
