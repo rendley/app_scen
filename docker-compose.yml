@@ -1,6 +1,7 @@
 version: '3'
 
 services:
+
   web:
     build: ./
     entrypoint: ./entrypoint.sh
@@ -25,3 +26,15 @@ services:
       - ./docker/postgres/init.sql:/docker-entrypoint-initdb.d/init.sql
     ports:
       - "5432:5432"
+
+  nginx:
+    build:
+      context: ./docker/nginx
+      dockerfile: Dockerfile
+    depends_on:
+      - web
+      - postgresdb
+    volumes:
+      - ./static_dev/:/static
+    ports:
+      - "80:80"
