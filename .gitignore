@@ -1,5 +1,8 @@
 #.gitignore
+#.env.dev
+#docker-compose.yml.save
 sent_emails/
+
 # Byte-compiled / optimized / DLL files
 __pycache__/
 *.py[cod]
