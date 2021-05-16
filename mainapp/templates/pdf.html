@@ -1,0 +1,351 @@
+<!DOCTYPE html>
+<html lang="en">
+{% load static %}
+<head>
+
+    <title>Результат</title>
+
+    <meta charset="utf-8">
+<!--    <link rel="stylesheet" href="{% static 'css/style_result.css' %}">-->
+
+</head>
+<body>
+
+<!--        <div class="instr">-->
+<!--            Здесь но вывести дополнительную информацию-->
+<!--            <p>-->
+
+<!--        </div>-->
+
+<div class="general">
+
+        <div class="">
+
+            <div class="realize">
+                <div class="text">
+                    Способ реализации угрозы № ____ - {{ implement.name }}
+                </div>
+            </div>
+
+        </div>
+
+<div class="row">
+
+    <div class="wrapper">
+        {% for tactic in tactics %}
+            {% if tactic.id == 1 %}
+            <div class="item">
+                <div class="text">
+                {{ tactic.description }}
+                </div>
+            </div>
+            {% endif %}
+        {% endfor %}
+    </div>
+
+    <div class="wrapper2">
+        {% for tactic in tactics %}
+            {% if tactic.id == 2 %}
+            <div class="item">
+                <div class="text">
+                {{ tactic.description }}
+                </div>
+            </div>
+            {% endif %}
+        {% endfor %}
+    </div>
+
+    <div class="wrapper">
+        {% for tactic in tactics %}
+            {% if tactic.id == 3 %}
+            <div class="item">
+                <div class="text">
+                {{ tactic.description }}
+                </div>
+            </div>
+            {% endif %}
+        {% endfor %}
+    </div>
+
+    <div class="wrapper">
+        {% for tactic in tactics %}
+            {% if tactic.id == 4 %}
+            <div class="item">
+                <div class="text">
+                {{ tactic.description }}
+                </div>
+            </div>
+            {% endif %}
+        {% endfor %}
+    </div>
+
+        <div class="wrapper">
+        {% for tactic in tactics %}
+            {% if tactic.id == 5 %}
+            <div class="item">
+                <div class="text">
+                {{ tactic.description }}
+                </div>
+            </div>
+            {% endif %}
+        {% endfor %}
+    </div>
+
+        <div class="wrapper">
+        {% for tactic in tactics %}
+            {% if tactic.id == 6 %}
+            <div class="item">
+                <div class="text">
+                {{ tactic.description }}
+                </div>
+            </div>
+            {% endif %}
+        {% endfor %}
+    </div>
+
+        <div class="wrapper">
+        {% for tactic in tactics %}
+            {% if tactic.id == 7 %}
+            <div class="item">
+                <div class="text">
+                {{ tactic.description }}
+                </div>
+            </div>
+            {% endif %}
+        {% endfor %}
+    </div>
+
+        <div class="wrapper">
+        {% for tactic in tactics %}
+            {% if tactic.id == 8 %}
+            <div class="item">
+                <div class="text">
+                {{ tactic.description }}
+                </div>
+            </div>
+            {% endif %}
+        {% endfor %}
+    </div>
+
+        <div class="wrapper">
+        {% for tactic in tactics %}
+            {% if tactic.id == 9 %}
+            <div class="item">
+                <div class="text">
+                {{ tactic.description }}
+                </div>
+            </div>
+            {% endif %}
+        {% endfor %}
+    </div>
+
+        <div class="wrapper10">
+        {% for tactic in tactics %}
+            {% if tactic.id == 10 %}
+            <div class="item">
+                <div class="text">
+                {{ tactic.description }}
+                </div>
+            </div>
+            {% endif %}
+        {% endfor %}
+    </div>
+
+</div>
+
+
+<div class="row">
+  <div class="wrapper1">
+
+        {% for technic in technics %}
+            {% for tactic in tactics %}
+      <!--        сравниваем для того чтобы привязать техники к родительской тактике,
+            дальше можно привязать не к id а к номеру в модели-->
+                {% if tactic.id == technic.tactics.id %}
+
+                    {% if technic.tactics.id == 1 %}
+                            <div class="item1">
+                                <div class="text">
+                                {{ technic.name }}
+                                </div>
+                            </div>
+                    {% endif %}
+
+                {% endif %}
+            {% endfor %}
+        {% endfor %}
+
+</div>
+
+
+  <div class="wrapper1">
+        {% for technic in technics %}
+            {% for tactic in tactics %}
+                {% if tactic.id == technic.tactics.id %}
+
+                    {% if technic.tactics.id == 2 %}
+                            <div class="item1">
+                                <div class="text">
+                                {{ technic.name }}
+                                </div>
+                            </div>
+                    {% endif %}
+
+                {% endif %}
+            {% endfor %}
+        {% endfor %}
+</div>
+
+      <div class="wrapper1">
+        {% for technic in technics %}
+            {% for tactic in tactics %}
+                {% if tactic.id == technic.tactics.id %}
+
+                    {% if technic.tactics.id == 3 %}
+                            <div class="item1">
+                                <div class="text">
+                                {{ technic.name }}
+                                </div>
+                            </div>
+                    {% endif %}
+
+                {% endif %}
+            {% endfor %}
+        {% endfor %}
+</div>
+
+    <div class="wrapper1">
+        {% for technic in technics %}
+            {% for tactic in tactics %}
+                {% if tactic.id == technic.tactics.id %}
+
+                    {% if technic.tactics.id == 4 %}
+                            <div class="item1">
+                                <div class="text">
+                                {{ technic.name }}
+                                </div>
+                            </div>
+                    {% endif %}
+
+                {% endif %}
+            {% endfor %}
+        {% endfor %}
+</div>
+
+    <div class="wrapper1">
+        {% for technic in technics %}
+            {% for tactic in tactics %}
+                {% if tactic.id == technic.tactics.id %}
+
+                    {% if technic.tactics.id == 5 %}
+                            <div class="item1">
+                                <div class="text">
+                                {{ technic.name }}
+                                </div>
+                            </div>
+                    {% endif %}
+
+                {% endif %}
+            {% endfor %}
+        {% endfor %}
+</div>
+
+    <div class="wrapper1">
+        {% for technic in technics %}
+            {% for tactic in tactics %}
+                {% if tactic.id == technic.tactics.id %}
+
+                    {% if technic.tactics.id == 6 %}
+                            <div class="item1">
+                                <div class="text">
+                                {{ technic.name }}
+                                </div>
+                            </div>
+                    {% endif %}
+
+                {% endif %}
+            {% endfor %}
+        {% endfor %}
+</div>
+
+    <div class="wrapper1">
+        {% for technic in technics %}
+            {% for tactic in tactics %}
+                {% if tactic.id == technic.tactics.id %}
+
+                    {% if technic.tactics.id == 7 %}
+                            <div class="item1">
+                                <div class="text">
+                                {{ technic.name }}
+                                </div>
+                            </div>
+                    {% endif %}
+
+                {% endif %}
+            {% endfor %}
+        {% endfor %}
+</div>
+
+    <div class="wrapper1">
+        {% for technic in technics %}
+            {% for tactic in tactics %}
+                {% if tactic.id == technic.tactics.id %}
+
+                    {% if technic.tactics.id == 8 %}
+                            <div class="item1">
+                                <div class="text">
+                                {{ technic.name }}
+                                </div>
+                            </div>
+                    {% endif %}
+
+                {% endif %}
+            {% endfor %}
+        {% endfor %}
+</div>
+
+    <div class="wrapper1">
+        {% for technic in technics %}
+            {% for tactic in tactics %}
+                {% if tactic.id == technic.tactics.id %}
+
+                    {% if technic.tactics.id == 9 %}
+                            <div class="item1">
+                                <div class="text">
+                                {{ technic.name }}
+                                </div>
+                            </div>
+                    {% endif %}
+
+                {% endif %}
+            {% endfor %}
+        {% endfor %}
+</div>
+
+    <div class="wrapper1">
+        {% for technic in technics %}
+            {% for tactic in tactics %}
+                {% if tactic.id == technic.tactics.id %}
+
+                    {% if technic.tactics.id == 10 %}
+                            <div class="item1">
+                                <div class="text">
+                                {{ technic.name }}
+                                </div>
+                            </div>
+                    {% endif %}
+
+                {% endif %}
+            {% endfor %}
+        {% endfor %}
+</div>
+
+</div>
+</div>
+
+
+
+</body>
+</html>
+
+

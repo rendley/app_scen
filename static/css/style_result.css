@@ -11,7 +11,7 @@ div {
 }
 
 .general {
-    background-color: #dbd0d0;
+    background-color: rgba(163, 154, 154, 0.46);
     margin-top: 50px;
     margin-bottom: 50px;
     border: 2px solid rgba(90, 71, 27, 0.46);
@@ -34,6 +34,19 @@ div {
 
 }
 
+.realize {
+    /*height: 50px;*/
+    border-radius: 5px;
+    background-color: rgba(235, 89, 99, 0.46);
+    text-align: center;
+    /*font-weight: bold;*/
+    margin-left: 25px;
+    margin-right: 25px;
+    margin-top: 10px;
+    /*padding: 5px;*/
+    border: 1px solid rgba(27, 67, 90, 0.46);
+}
+
 .item{
     width: 105px;
     height: 150px;
@@ -49,6 +62,7 @@ div {
 
 .text  {
     margin-top: 5px;
+    margin-bottom: 5px;
 }
 
 .wrapper1{
@@ -73,4 +87,37 @@ div {
     text-align: center;
     font-size: 20px;
     border: 2px solid rgba(90, 71, 27, 0.46);
+}
+
+.button1 {
+    width: 200px;
+    background-color: rgba(89, 235, 94, 0.46);
+    border: 2px solid rgba(89, 235, 94, 0.6);
+    color: black;
+    padding: 15px 1px;
+    text-align: center;
+    text-decoration: none;
+    display: inline-block;
+    font-size: 16px;
+    border-radius: 5px;
+
+}
+
+.button2 {
+    width: 200px;
+    background-color: rgba(235, 89, 89, 0.46);
+    border: 2px solid rgba(235, 89, 89, 0.6);
+    color: black;
+    padding: 15px 1px;
+    text-align: center;
+    text-decoration: none;
+    display: inline-block;
+    font-size: 16px;
+    border-radius: 5px;
+    margin-left: 10px;
+
+}
+
+.button_center {
+    justify-content: center;
 }
