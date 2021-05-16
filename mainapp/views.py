@@ -32,7 +32,8 @@ class TacticsView(View):
 
         tactics = Tactics.objects.filter(id__in=list_of_tactics)
         technics = Technics.objects.filter(id__in=list_of_technics)
-        implement = Implementation.objects.get(pk=implement_id)
+        # implement = Implementation.objects.get(pk=implement_id)
+        implement = get_object_or_404(Implementation, pk=implement_id)
         context = {'tactics': tactics, 'technics': technics, 'implement': implement}
         return render(request, 'result.html', context)
 
@@ -48,7 +49,8 @@ class GeneratePdfView(View):
         # print(list_tactics_id)
         tactics = Tactics.objects.filter(id__in=list_tactics_id)
         technics = Technics.objects.filter(id__in=list_technics_id)
-        implement = Implementation.objects.get(pk=implement_id)
+        # implement = Implementation.objects.get(pk=implement_id)
+        implement = get_object_or_404(Implementation, pk=implement_id)
         html_string = render_to_string('pdf.html', {'tactics': tactics, 'technics': technics, 'implement': implement})
         response = HttpResponse(content_type='application/pdf')
         response['Content-Disposition'] = 'filename="tactics.pdf"'
