@@ -1,6 +1,6 @@
 from django.contrib import admin
 
-from .models import Technics, Tactics, Implementation, Title
+from .models import Technics, Tactics, Implementation, Title, Threat
 
 
 class TacticsAdmin(admin.ModelAdmin):
@@ -18,8 +18,13 @@ class TechnicsAdmin(admin.ModelAdmin):
 class ImplementationAdmin(admin.ModelAdmin):
     list_display = ('name', )
 
+
+class ThreatAdmin(admin.ModelAdmin):
+    list_display = ('id','number', 'name',) 
+
 # admin.site.register(Title)
 # admin.site.register(Implementation)
 admin.site.register(Tactics, TacticsAdmin)
 admin.site.register(Technics, TechnicsAdmin)
 admin.site.register(Implementation, ImplementationAdmin)
+admin.site.register(Threat, ThreatAdmin)

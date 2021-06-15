@@ -8,6 +8,11 @@ class Title(models.Model):
     def __str__(self):
         return self.header
 
+class Threat(models.Model):
+    """Класс угоз"""
+    name = models.CharField(verbose_name='Угроза безопасности', max_length=1000)
+    number = models.PositiveIntegerField(verbose_name='Номер угрозы')
+
 
 class Implementation(models.Model):
     """Класс способов реализации угроз"""

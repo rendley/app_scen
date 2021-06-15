@@ -19,19 +19,15 @@
 
 <div class="general">
 
+        <div class="">
 
             <div class="realize">
                 <div class="text">
-
-                {{ threat.name }} <p>
-
-                Способ реализации угрозы - {{ implement.name }}
-			
-
+                    Способ реализации угрозы № ____ - {{ implement.name }}
                 </div>
             </div>
 
-
+        </div>
 
 <div class="row">
 

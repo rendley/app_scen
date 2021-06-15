@@ -1,6 +1,7 @@
 <!DOCTYPE html>
 <html lang="en">
 {% load static %}
+{% load custom_tags %}
 <head>
 
     <title>Выбор техник</title>
@@ -9,6 +10,12 @@
 
         <link rel="stylesheet" href="{% static 'css/style_index.css' %}">
 
+	<style>
+   		select {
+       			width: 55px; /* Ширина списка в пикселах */
+			text-align: center;
+		   }			
+	</style>
 </head>
 <body>
 <div class="instr">
@@ -17,7 +24,7 @@
     Просто выбирай тактики и техники. Внизу увидишь кнопку создать модель.
     <p>
     </p>
-    Congratulations!!!
+  
     </p>
 </div>
 
@@ -34,14 +41,14 @@
 
                         <div class="form-check-tactic">
                             <input class="form-check-input" type="checkbox" value="{{ tactic.id }}" id="{{ tactic.name }}" name="list_tactic_id">
-                            <label class="form-check-label" for="{{ tactic.name }}">{{ tactic.name }}</label>
+                            <label class="form-check-label" for="{{ tactic.name }}">{{ tactic.name}}</label>
                         </div>
 
-                    {% for technic in tactic.technics.all %}
+                    {% for technic in tactic.technics.all|sort_by:'number' %}
                         <ul>
                             <div class="form-check-technic">
                                 <input class="form-check-input" type="checkbox" value="{{ technic.id }}" id="{{ technic.name }}" name="list_technic_id">
-                                <label class="form-check-label" for="{{ technic.name }}">{{ technic.name }}</label>
+                                <label class="form-check-label" for="{{ technic.name }}">{{ technic.description }}</label>
                             </div>
                         </ul>
                     {% endfor %}
@@ -62,7 +69,23 @@
                 {% endfor %}
         </div>
 
-                <button class="button1" type="submit">Создать модель</button>
+	<div class="header">
+                Выбор угрозы безопасности
+        </div>
+
+
+        <div class="wrapper"> 
+
+	<select id="selectvalue" name="number_threat" size='3'>
+            
+  		{% for threat in threats %}
+	  		<option> {{ threat.id }} </option>
+		{% endfor %}
+       	</select>	
+
+	</div>
+		
+		<button class="button1" type="submit">Создать модель</button>
             </form>
     </div>
 

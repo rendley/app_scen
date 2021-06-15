@@ -21,7 +21,7 @@ div {
 .row {
     display: flex;
     justify-content: center;
-    font-size: 14px;
+    font-size: 12px;
     margin: 1px;
     margin-bottom: 10px;
     /*вертикальное центрирование блоков div item внутри div wrapper*/
@@ -100,7 +100,7 @@ div {
     display: inline-block;
     font-size: 16px;
     border-radius: 5px;
-
+    margin-bottom: 50px;
 }
 
 .button2 {
@@ -115,7 +115,6 @@ div {
     font-size: 16px;
     border-radius: 5px;
     margin-left: 10px;
-
 }
 
 .button_center {
